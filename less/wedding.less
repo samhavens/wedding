@@ -174,9 +174,10 @@ header {
         width: 100%;
         .header-content-inner {
             h1 {
-                font-weight: 700;
-                text-transform: uppercase;
-                margin-top: 0;
+                .fancy-font;
+                font-weight: 300;
+                // text-transform: uppercase;
+                margin-top: -100px;
                 margin-bottom: 0;
             }
             hr {
@@ -350,4 +351,30 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: @theme-dark;
+}
+
+ul.countdown {
+    list-style: none;
+    margin: 75px 0;
+    padding: 0;
+    display: block;
+    text-align: center;
+    li {
+        display: inline-block;
+        span {
+            font-size: 80px;
+            font-weight: 300;
+            line-height: 80px;
+        }
+        p {
+            color: #a7abb1;
+            font-size: 14px;
+        }
+
+    }
+    li.seperator {
+        font-size: 80px;
+        line-height: 70px;
+        vertical-align: top;
+    }
 }

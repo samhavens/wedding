@@ -159,9 +159,9 @@ header .header-content {
   width: 100%;
 }
 header .header-content .header-content-inner h1 {
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-top: 0;
+  font-family: 'Parisienne', cursive;
+  font-weight: 300;
+  margin-top: -100px;
   margin-bottom: 0;
 }
 header .header-content .header-content-inner hr {
@@ -399,4 +399,28 @@ img::-moz-selection {
 }
 body {
   webkit-tap-highlight-color: #ac5c70;
+}
+ul.countdown {
+  list-style: none;
+  margin: 75px 0;
+  padding: 0;
+  display: block;
+  text-align: center;
+}
+ul.countdown li {
+  display: inline-block;
+}
+ul.countdown li span {
+  font-size: 80px;
+  font-weight: 300;
+  line-height: 80px;
+}
+ul.countdown li p {
+  color: #a7abb1;
+  font-size: 14px;
+}
+ul.countdown li.seperator {
+  font-size: 80px;
+  line-height: 70px;
+  vertical-align: top;
 }
