@@ -185,6 +185,7 @@
         </div>
     </section>
 
+    <!-- countdown footer -->
     <section class="bg-primary" style="padding:10px 0;">
       <ul class="countdown">
         <li>
@@ -208,6 +209,19 @@
         </li> -->
     </ul>
     </section>
+    load fonts
+    <script type="text/javascript">
+      WebFontConfig = {
+        google: { families: [ 'Josefin+Slab::latin', 'Josefin+Sans:300,100:latin' ] }
+      };
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })(); </script>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
@@ -324,25 +338,13 @@
       });
 
       var picML = '';
-      for (var i = 1; i < 13; i++) {
-        picML += '<div class="col-lg-4 col-sm-6"><img src="img/portfolio/'+i+'.png" class="img-responsive" alt=""></div>'
-      }
+      var goodPicNums = [6,2,5,4,8,12,1,10,3];//this lets us pic the good images
+      $.each(goodPicNums, function(index, number) {
+        picML += '<div class="col-lg-4 col-sm-6"><img src="img/portfolio/'+number+'.png" class="img-responsive" alt=""></div>'
+      });
 
       $('#pics-go-here').html(picML);
     </script>
-
-    <script type="text/javascript">
-      WebFontConfig = {
-        google: { families: [ 'Josefin+Slab::latin', 'Josefin+Sans:300,100:latin' ] }
-      };
-      (function() {
-        var wf = document.createElement('script');
-        wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-        wf.type = 'text/javascript';
-        wf.async = 'true';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(wf, s);
-      })(); </script>
 
 </body>
 
