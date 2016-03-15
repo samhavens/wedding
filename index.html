@@ -6,18 +6,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Sam Havens and Marcelle Justison wedding site. Sam and Marcelle and getting married and Runnymede, CA on October 1, 2016.">
+    <meta name="description" content="Sam Havens and Marcelle Justison's wedding site. Sam and Marcelle and getting married at Runnymede Sculpture Farm in Woodside, CA on October 1, 2016.">
     <meta name="author" content="Sam Havens and Marcelle Justison">
 
     <title>Marcelle &amp; Sam Get Hitched!</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-
-    <!-- Custom Fonts - now done in javascript-->
-    <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:200,300' rel='stylesheet' type='text/css'> -->
-    <!-- <link href='https://fonts.googleapis.com/css?family=Parisienne' rel='stylesheet' type='text/css'> -->
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
 
     <!-- Plugin CSS -->
@@ -116,7 +111,7 @@
                     <div class="service-box">
                         <i class="fa fa-4x fa-calendar-check-o wow bounceIn text-primary"></i>
                         <h3>Saturday October 1, 2016</h3>
-                        <p class="text-muted">Mark your calendars! Ceremony at 16:00, reception immediately after.</p>
+                        <p class="text-muted">Mark your calendars! Ceremony at 16:00, followed by reception.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-3 text-center">
@@ -244,7 +239,7 @@
       })(); </script>
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="js/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
@@ -255,116 +250,12 @@
     <script src="js/jquery.downCount.js"></script>
     <script src="js/wow.min.js"></script>
 
-    <!-- Custom Theme JavaScript -->
-    <script src="js/wedding.js"></script>
+    <!-- Google Maps code -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACiF8_M3-5FCVoB664-dXZLejqAjBsJwY"></script>
-    <script>
-      // When the window has finished loading create our google map below
-      google.maps.event.addDomListener(window, 'load', init);
 
-      function init() {
-          // Basic options for a simple Google Map
-          // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-          var mapOptions = {
-              // How zoomed in you want the map to start at (always required)
-              zoom: 11,
+    <!-- Custom Theme JavaScript -->
+    <script src="js/wedding.min.js"></script>
 
-              //disable scrolling b/c full width
-              scrollwheel: false,
-              draggable: false,
-
-              // The latitude and longitude to center the map (always required)
-              center: new google.maps.LatLng(37.444445,-122.275243), // Runnymede
-
-              // How you would like to style the map.
-              // This is where you would paste any style found on Snazzy Maps.
-              styles: [
-                {
-                  "featureType":"landscape",
-                  "stylers":[
-                    {"hue":"#FFBB00"},
-                    {"saturation":43.400000000000006},
-                    {"lightness":37.599999999999994},
-                    {"gamma":1}
-                  ]
-                },
-                {
-                  "featureType":"road.highway",
-                  "stylers":[
-                    {"hue":"#FFC200"},
-                    {"saturation":-61.8},
-                    {"lightness":45.599999999999994},
-                    {"gamma":1}
-                  ]
-                },
-                {
-                  "featureType":"road.arterial",
-                  "stylers":[
-                    {"hue":"#FF0300"},
-                    {"saturation":-100},
-                    {"lightness":51.19999999999999},
-                    {"gamma":1}
-                  ]
-                },
-                {
-                  "featureType":"road.local",
-                  "stylers":[
-                    {"hue":"#FF0300"},
-                    {"saturation":-100},
-                    {"lightness":52},
-                    {"gamma":1}
-                  ]
-                },
-                {
-                  "featureType":"water",
-                  "stylers":[
-                    {"hue":"#0078FF"},
-                    {"saturation":-13.200000000000003},
-                    {"lightness":2.4000000000000057},
-                    {"gamma":1}
-                  ]
-                },
-                {
-                  "featureType":"poi",
-                  "stylers":[
-                    {"hue":"#00FF6A"},
-                    {"saturation":-1.0989010989011234},
-                    {"lightness":11.200000000000017},
-                    {"gamma":1}
-                  ]
-                }
-              ]
-          };
-
-          // Get the HTML DOM element that will contain your map
-          // We are using a div with id="map" seen below in the <body>
-          var mapElement = document.getElementById('map');
-
-          // Create the Google Map using our element and options defined above
-          var map = new google.maps.Map(mapElement, mapOptions);
-
-          // Let's also add a marker while we're at it
-          var marker = new google.maps.Marker({
-              position: mapOptions.center,
-              map: map,
-              title: 'Runnymede!'
-          });
-      }
-
-      //countdown
-      $('.countdown').downCount({
-          date: '10/01/2016 16:00:00',
-          offset: -5
-      });
-
-      var picML = '';
-      var goodPicNums = [6,2,5,4,8,12,1,10,3];//this lets us pic the good images
-      $.each(goodPicNums, function(index, number) {
-        picML += '<div class="col-lg-4 col-sm-6"><img src="img/portfolio/'+number+'.png" class="img-responsive" alt=""></div>'
-      });
-
-      $('#pics-go-here').html(picML);
-    </script>
 
 </body>
 
