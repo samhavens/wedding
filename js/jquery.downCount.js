@@ -98,7 +98,8 @@
         };
 
         // start
-        var interval = setInterval(countdown, 1000);
+        countdown();
+        //var interval = setInterval(countdown, 1000);//to update every second
     };
 
 })(jQuery);
