@@ -133,8 +133,13 @@
         var marker = new google.maps.Marker({
             position: mapOptions.center,
             map: map,
-            title: 'Runnymede!'
+            title: 'Runnymede!',
+            url: "https://www.google.com/maps/place/37%C2%B026'39.9%22N+122%C2%B016'41.8%22W/@37.4444149,-122.2957874,14z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d37.4444101!4d-122.2782771"
         });
+        google.maps.event.addListener(marker, 'click', function() {
+            window.location.href = this.url;
+        });
+
     }
 
     //countdown
