@@ -151,7 +151,7 @@
     var picML = '';
     var goodPicNums = [6,2,5,4,8,12,1,10,3];//this lets us pic the good images
     $.each(goodPicNums, function(index, number) {
-      picML += '<div class="col-lg-4 col-sm-6"><img src="img/portfolio/'+number+'.png" class="img-responsive" alt=""></div>'
+      picML += '<div class="col-lg-4 col-sm-6"><img src="img/portfolio/'+number+'.png" class="img-responsive" alt="Sam Havens and Marcelle Justison - wedding 10/01/2016 in Woodside, CA."></div>'
     });
 
     $('#pics-go-here').html(picML);
